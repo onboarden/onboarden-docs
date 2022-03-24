@@ -1,3 +1,5 @@
+# index.rb
+
 require 'sinatra'
 require 'jwt'
 require "sinatra/cors"

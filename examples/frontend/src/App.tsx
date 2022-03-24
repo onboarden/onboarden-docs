@@ -1,3 +1,5 @@
+// src/App.tsx
+
 import { launch } from "@onboarden/importer";
 import React, { useEffect, useState } from "react";
 
