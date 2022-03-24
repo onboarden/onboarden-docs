@@ -1,1 +1,1 @@
-npx create-react-app importer-example
+npx create-react-app importer-example --template typescript
