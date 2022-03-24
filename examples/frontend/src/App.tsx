@@ -1,7 +1,7 @@
 import { launch } from "@onboarden/importer";
 import React, { useEffect, useState } from "react";
 
-const TEMPLATE_ID = "Sd2YB0Vh054m5X6";
+const TEMPLATE_ID = "YOUR TEMPLATE ID"; // change this
 
 function App() {
   const [token, setToken] = useState<string | undefined>();
@@ -22,7 +22,7 @@ function App() {
 
   return (
     <div>
-      <button onClick={launchImporter} disabled={token == undefined}>
+      <button onClick={launchImporter} disabled={token === undefined}>
         Import
       </button>
     </div>
