@@ -16,8 +16,8 @@ function App() {
     setToken(token);
   };
 
-  const launchImporter = async () => {
-    await launch({ templateId: TEMPLATE_ID, jwt: token });
+  const launchImporter = () => {
+    launch({ templateId: TEMPLATE_ID, jwt: token });
   };
 
   return (
