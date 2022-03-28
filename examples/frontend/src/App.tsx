@@ -3,7 +3,7 @@
 import { launch } from "@onboarden/importer";
 import React, { useEffect, useState } from "react";
 
-const TEMPLATE_ID = "YOUR TEMPLATE ID"; // change this
+const TEMPLATE_ID = "YOUR TEMPLATE ID";
 
 function App() {
   const [token, setToken] = useState<string | undefined>();
