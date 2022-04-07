@@ -8,7 +8,7 @@ const cors = require("cors");
 const app = express();
 app.use(cors({ origin: "http://localhost:3000" }));
 
-const API_KEY = "YOUR API KEY"; // change this
+const API_KEY = "YOUR_API_KEY"; // change this
 
 app.get("/", async (_req, res) => {
   const userId = "user-id-of-your-app";

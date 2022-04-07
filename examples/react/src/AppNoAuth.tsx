@@ -3,7 +3,7 @@
 import { launch } from "@onboarden/importer";
 import React from "react";
 
-const TEMPLATE_ID = "YOUR TEMPLATE ID";
+const TEMPLATE_ID = "YOUR_TEMPLATE_ID";
 
 function App() {
   const launchImporter = async () => {

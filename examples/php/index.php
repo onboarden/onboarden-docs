@@ -7,7 +7,7 @@ require 'vendor/autoload.php';
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 
-$API_KEY = 'YOUR API KEY'; // change this
+$API_KEY = 'YOUR_API_KEY'; // change this
     
 $token = JWT::encode(
   [ 
