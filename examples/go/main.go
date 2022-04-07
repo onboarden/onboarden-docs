@@ -27,19 +27,19 @@ type Response struct {
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
-		response := Response{Token: generateToken()}
-		
-		var buf bytes.Buffer
-		enc := json.NewEncoder(&buf)
-		if err := enc.Encode(&response); err != nil {
-			log.Fatal(err)
-		}
-		fmt.Println(buf.String())
+	response := Response{Token: generateToken()}
 
-		_, err := fmt.Fprint(w, buf.String())
-		if err != nil {
-			return
-		}
+	var buf bytes.Buffer
+	enc := json.NewEncoder(&buf)
+	if err := enc.Encode(&response); err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println(buf.String())
+
+	_, err := fmt.Fprint(w, buf.String())
+	if err != nil {
+		return
+	}
 }
 
 func generateToken() string {
@@ -67,5 +67,5 @@ func generateToken() string {
 		log.Fatal(err)
 	}
 
-	return tokenString;
+	return tokenString
 }
