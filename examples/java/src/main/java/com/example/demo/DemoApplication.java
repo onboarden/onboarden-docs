@@ -28,7 +28,7 @@ public class DemoApplication {
 
     @GetMapping("/")
     public Response hello() {
-        String API_KEY = "YOUR API KEY"; // change this
+        String API_KEY = "YOUR_API_KEY"; // change this
 
         String userId = "user-id-of-your-app";
         String token = generateToken(API_KEY, userId);

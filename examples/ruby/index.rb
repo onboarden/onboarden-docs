@@ -4,7 +4,7 @@ require 'sinatra'
 require 'jwt'
 require "sinatra/cors"
 
-API_KEY = 'YOUR API KEY' # change this
+API_KEY = 'YOUR_API_KEY' # change this
 key = OpenSSL::PKey::RSA.new Base64.decode64 API_KEY 
 
 set :allow_origin, "http://localhost:3000"

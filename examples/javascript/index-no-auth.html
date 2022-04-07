@@ -8,9 +8,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@onboarden/importer/dist/browser/onboarden-importer.min.js"></script>
     <script>
-      const TEMPLATE_ID = 'YOUR TEMPLATE ID';
+      const TEMPLATE_ID = "YOUR_TEMPLATE_ID";
 
-      document.getElementById('import').onclick = async () => {
+      document.getElementById("import").onclick = async () => {
         OnboardenImporter.launch({
           templateId: TEMPLATE_ID,
           onCompleted: (result) => console.log(result),

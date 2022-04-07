@@ -8,10 +8,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@onboarden/importer/dist/browser/onboarden-importer.min.js"></script>
     <script>
-      const TEMPLATE_ID = 'YOUR TEMPLATE ID';
+      const TEMPLATE_ID = "YOUR_TEMPLATE_ID";
 
-      document.getElementById('import').onclick = async () => {
-        const response = await fetch('http://localhost:8000');
+      document.getElementById("import").onclick = async () => {
+        const response = await fetch("http://localhost:8000");
         const { token } = await response.json();
 
         OnboardenImporter.launch({

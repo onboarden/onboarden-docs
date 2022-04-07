@@ -12,7 +12,7 @@ app.add_middleware(
     allow_origins=["http://localhost:3000"],
 )
 
-API_KEY = "YOUR API KEY"  # Change here!
+API_KEY = "YOUR_API_KEY"  # Change here!
 PRIVATE_KEY = base64.b64decode(API_KEY)
 
 
