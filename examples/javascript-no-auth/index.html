@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Onboarden Example</title>
+  </head>
+  <body>
+    <button id="import">Import</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/@onboarden/importer/dist/browser/onboarden-importer.min.js"></script>
+    <script>
+      const TEMPLATE_ID = 'YOUR TEMPLATE ID';
+
+      document.getElementById('import').onclick = async () => {
+        OnboardenImporter.launch({
+          templateId: TEMPLATE_ID,
+          onCompleted: (result) => console.log(result),
+        });
+      };
+    </script>
+  </body>
+</html>
