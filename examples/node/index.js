@@ -10,10 +10,6 @@ app.use(cors({ origin: "http://localhost:3000" }));
 
 const API_KEY = "YOUR API KEY"; // change this
 
-app.set("view engine", "html");
-app.set("views", __dirname);
-app.engine("html", require("ejs").renderFile);
-
 app.get("/", async (_req, res) => {
   const userId = "user-id-of-your-app";
   const token = jwt.sign(
