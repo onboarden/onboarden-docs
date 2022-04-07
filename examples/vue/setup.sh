@@ -1,6 +1,6 @@
 npm init vue@latest
 
-✔ Project name: … vue
+✔ Project name: … my-app
 ✔ Add TypeScript? … Yes
 ✔ Add JSX Support? … No
 ✔ Add Vue Router for Single Page Application development? … No
