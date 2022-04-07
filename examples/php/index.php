@@ -11,6 +11,8 @@ $API_KEY = 'YOUR_API_KEY'; // change this
     
 $token = JWT::encode(
   [ 
+    // あなたのアプリケーションのユーザーを一意に識別するID（任意）
+    // 付与すると、ユーザーがインポートを中断した場合でも再アクセス時に途中から再開できます
     'sub' => 'user-id-of-your-app',
     'exp' => time() + 60 * 60,
   ],

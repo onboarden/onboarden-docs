@@ -16,6 +16,8 @@ get '/' do
   content_type :json
 
   payload = {
+    # あなたのアプリケーションのユーザーを一意に識別するID（任意）
+    # 付与すると、ユーザーがインポートを中断した場合でも再アクセス時に途中から再開できます
     sub: 'user-id-of-your-app'
     exp: (Time.now + 60 * 60).to_i 
   }
