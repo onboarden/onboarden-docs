@@ -30,6 +30,8 @@ public class DemoApplication {
     public Response hello() {
         String API_KEY = "YOUR_API_KEY"; // change this
 
+        // あなたのアプリケーションのユーザーを一意に識別するID（任意）
+        // 付与すると、ユーザーがインポートを中断した場合でも再アクセス時に途中から再開できます
         String userId = "user-id-of-your-app";
         String token = generateToken(API_KEY, userId);
 

@@ -17,7 +17,9 @@ PRIVATE_KEY = base64.b64decode(API_KEY)
 
 
 @app.get("/")
-async def index():
+async def index(): 
+    # あなたのアプリケーションのユーザーを一意に識別するID（任意）
+    # 付与すると、ユーザーがインポートを中断した場合でも再アクセス時に途中から再開できます
     userId = "user-id-of-your-app"
     token = jwt.encode({"sub": userId, "exp": int(
         time.time()) + 60 * 30}, PRIVATE_KEY, algorithm="RS256")
