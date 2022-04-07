@@ -1,13 +1,13 @@
 // src/App.tsx
 
-import { launch } from '@onboarden/importer';
-import React from 'react';
+import { launch } from "@onboarden/importer";
+import React from "react";
 
-const TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+const TEMPLATE_ID = "YOUR TEMPLATE ID";
 
 function App() {
   const launchImporter = async () => {
-    const response = await fetch('http://localhost:8000');
+    const response = await fetch("http://localhost:8000");
     const { token } = await response.json();
 
     launch({

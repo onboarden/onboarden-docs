@@ -3,7 +3,7 @@
 <script lang="ts">
 import { launch } from "@onboarden/importer";
 
-const TEMPLATE_ID = "YOUR_TEMPLATE_ID";
+const TEMPLATE_ID = "YOUR TEMPLATE ID";
 
 export default {
   methods: {
