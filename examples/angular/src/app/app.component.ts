@@ -3,7 +3,7 @@
 import { Component } from '@angular/core';
 import { launch } from '@onboarden/importer';
 
-const TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+const TEMPLATE_ID = 'YOUR TEMPLATE ID';
 
 @Component({
   selector: 'app-root',
