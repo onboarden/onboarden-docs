@@ -45,7 +45,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 func generateToken() string {
 	claims := jwt.MapClaims{
 		// あなたのアプリケーションのユーザーを一意に識別するID（任意）
-		// 付与すると、ユーザーがインポートを中断した場合でも再アクセス時に途中から再開できます
+		// 付与すると、ユーザーがインポートを中断した場合でも再アクセス時に途中から再開でき、またユーザーごとに列のマッピング情報が記憶されます
 		"sub": "user-id-of-your-app",
 		"exp": time.Now().Add(time.Hour * 1).Unix(),
 	}
