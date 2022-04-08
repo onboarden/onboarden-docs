@@ -27,6 +27,9 @@ type Response struct {
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
+	// cors
+        w.Header().Add("Access-Control-Allow-Origin",  "http://localhost:3000")
+
 	response := Response{Token: generateToken()}
 
 	var buf bytes.Buffer
@@ -34,7 +37,6 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	if err := enc.Encode(&response); err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(buf.String())
 
 	_, err := fmt.Fprint(w, buf.String())
 	if err != nil {
