@@ -28,7 +28,7 @@ type Response struct {
 
 func handler(w http.ResponseWriter, r *http.Request) {
 	// cors
-        w.Header().Add("Access-Control-Allow-Origin",  "http://localhost:3000")
+	w.Header().Add("Access-Control-Allow-Origin", "http://localhost:3000")
 
 	response := Response{Token: generateToken()}
 
