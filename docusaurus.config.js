@@ -58,7 +58,7 @@ const config = {
         items: [
           {
             type: "doc",
-            docId: "getting-started/overview",
+            docId: "guides/overview",
             position: "left",
             label: "Dazaifu Docs",
           },
