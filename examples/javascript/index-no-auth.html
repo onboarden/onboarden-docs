@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Onboarden Example</title>
+    <title>onboarden Example</title>
   </head>
   <body>
     <button id="import">Import</button>
@@ -11,7 +11,7 @@
       const TEMPLATE_ID = "YOUR_TEMPLATE_ID";
 
       document.getElementById("import").onclick = async () => {
-        OnboardenImporter.launch({
+        onboardenImporter.launch({
           templateId: TEMPLATE_ID,
           onCompleted: (result) => console.log(result),
         });

@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Dazaifu",
+  title: "onboarden docs",
   // TODO: デプロイ後に削除する（デフォルト false）
   noIndex: true,
   // tagline: "THIS IS TAGLINE",
@@ -50,7 +50,7 @@ const config = {
       // <meta name="robots" content="noindex">
       navbar: {
         hideOnScroll: true,
-        title: "Dazaifu Docs",
+        title: "onboarden docs",
         // logo: {
         //   alt: "My Site Logo",
         //   src: "img/logo.svg",
@@ -58,9 +58,9 @@ const config = {
         items: [
           {
             type: "doc",
-            docId: "guides/overview",
+            docId: "guides/quickstart",
             position: "left",
-            label: "Dazaifu Docs",
+            label: "onboarden docs",
           },
           {
             type: "localeDropdown",
