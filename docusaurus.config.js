@@ -7,11 +7,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "onboarden docs",
-  // TODO: デプロイ後に削除する（デフォルト false）
-  noIndex: true,
-  // tagline: "THIS IS TAGLINE",
-  url: "https://dazaifu.jp",
-  // url: "https://yahoo.co.jp",
+  noIndex: false,
+  url: "https://onboarden.io",
   baseUrl: "/",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
@@ -20,12 +17,15 @@ const config = {
   projectName: "dazaifu", // Usually your repo name.
   i18n: {
     defaultLocale: "ja",
-    locales: ["ja", "en"],
+    locales: ["ja"],
+    // MEMO: 英語対応したらenを追加
+    // locales: ["ja", "en"],
   },
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // autoCollapseSidebarCategories: false,
+      // 検索を有効にする場合はコメントイン
+      // TODO: algoliaの申請完了したらコメントアウトを外す
       // algolia: {
       //   // The application ID provided by Algolia
       //   appId: "YOUR_APP_ID",
@@ -51,36 +51,23 @@ const config = {
       navbar: {
         hideOnScroll: true,
         title: "onboarden docs",
-        // logo: {
-        //   alt: "My Site Logo",
-        //   src: "img/logo.svg",
-        // },
         items: [
           {
             type: "doc",
-            docId: "guides/quickstart",
+            docId: "overview",
             position: "left",
             label: "onboarden docs",
           },
-          {
-            type: "localeDropdown",
-            position: "right",
-          },
+          // 言語選択は有効にする場合はコメントインすること
+          // {
+          //   type: "localeDropdown",
+          //   position: "right",
+          // },
           // {
           //   type: 'separator',
           //   position: 'right',
           // },
-          // { to: "/blog", label: "Blog", position: "left" },
-          // {
-          //   href: "https://github.com/facebook/docusaurus",
-          //   label: "GitHub",
-          //   position: "right",
-          // },
         ],
-      },
-      footer: {
-        style: "dark",
-        copyright: `Copyright © ${new Date().getFullYear()} Ghost, Inc.`,
       },
       prism: {
         theme: lightCodeTheme,
@@ -89,6 +76,7 @@ const config = {
     }),
   plugins: [
     "docusaurus-plugin-sass",
+    "@docusaurus/theme-live-codeblock",
     async function myPlugin(context, options) {
       return {
         name: "docusaurus-tailwindcss",
@@ -109,9 +97,6 @@ const config = {
         docs: {
           routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         blog: false,
         theme: {
