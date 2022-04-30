@@ -62,7 +62,7 @@ Payload には下記のデータが必要です。
 ```bash
 mkdir jwt && cd jwt
 npm init --y
-npm install jsonwebtoken date-fns
+npm install jsonwebtoken
 ```
 
 スクリプトを作成します。
@@ -71,7 +71,6 @@ npm install jsonwebtoken date-fns
 
 ```js title=main.js
 const jwt = require("jsonwebtoken");
-const addMinutes = require("date-fns/addMinutes");
 
 // highlight-next-line
 const API_KEY = "YOUR_API_KEY"; // change this
@@ -79,7 +78,7 @@ const token = jwt.sign(
   {
     sub: "user-id-of-your-app",
     // 1時間後に期限切れにする
-    exp: addMinutes(new Date(), 60).getTime() / 1000,
+    exp: Math.round(new Date().getTime() / 1000) + 3600,
   },
   Buffer.from(API_KEY, "base64").toString(),
   { algorithm: "RS256" }
