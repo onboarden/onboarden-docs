@@ -1,1 +1,1 @@
-pip install fastapi uvicorn pyjwt[crypto]
+pip install fastapi uvicorn pyjwt\[crypto\]
